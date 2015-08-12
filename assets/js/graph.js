@@ -1,96 +1,21 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Dashboard</title>
-    <!-- BOOTSTRAP CORE STYLE  -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet" />
-    <!-- FONT AWESOME ICONS  -->
-    <link href="assets/css/font-awesome.css" rel="stylesheet" />
-    <!-- CUSTOM STYLE  -->
-    <link href="assets/css/style.css" rel="stylesheet" />
-    <link href="assets/css/graph.css" rel ="stylesheet"/>
-     <script src="assets/js/jquery-1.11.1.js"></script>
-    <script src="http://code.highcharts.com/highcharts.js"></script>
-<script src="http://code.highcharts.com/modules/data.js"></script>
-<script src="http://code.highcharts.com/modules/drilldown.js"></script>
-</head>
-
-<body>
-    <div class="navbar navbar-inverse set-radius-zero">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">
-                <h1>AppName</h1>
-                </a>
-
-            </div>
-
-            <div class="left-div">
-                <div class="user-settings-wrapper">
-                    <ul class="nav">
-
-                        <li class="dropdown">
-                        </li>
-                    </ul>
-                </div>
-            </div>            
-        </div>
-    </div>
-
-    <div class="content-wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h4 class="page-head-line">Get Corrections</h4>
-
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="alert alert-success">
-                        Getting Started
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                 <div class="col-md-12">
-                    <div class="alert alert-success">
-                        The bar graph gives the success rate for each attribute which defines the complexity of the User experience 
-                    </div>
-                </div>
-            </div>
-           <div id="cont" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-    <!-- BOOTSTRAP SCRIPTS  -->
-    <script src="assets/js/bootstrap.js"></script>
-</body>
-<script>
-    $(function () {
+$(function () {
     // Create the chart
     $('#cont').highcharts({
         chart: {
             type: 'column'
         },
         title: {
-            text: 'UI and UX Analysis'
+            text: 'Browser market shares. January, 2015 to May, 2015'
         },
         subtitle: {
-            text: 'Click the columns to view.'
+            text: 'Click the columns to view versions. Source: <a href="http://netmarketshare.com">netmarketshare.com</a>.'
         },
         xAxis: {
-            type: 'Attribute'
+            type: 'category'
         },
         yAxis: {
             title: {
-                text: 'Total percent satisfying the need'
+                text: 'Total percent market share'
             }
 
         },
@@ -116,35 +41,35 @@
             name: "Brands",
             colorByPoint: true,
             data: [{
-                name: "Buttons",
+                name: "Microsoft Internet Explorer",
                 y: 56.33,
-                drilldown: "Buttons"
+                drilldown: "Microsoft Internet Explorer"
             }, {
-                name: "Backgorund",
+                name: "Chrome",
                 y: 24.03,
-                drilldown: "Backgorund"
+                drilldown: "Chrome"
             }, {
-                name: "ScrollBars",
+                name: "Firefox",
                 y: 10.38,
-                drilldown: "ScrollBars"
+                drilldown: "Firefox"
             }, {
-                name: "Navigation",
+                name: "Safari",
                 y: 4.77,
-                drilldown: "Navigation"
+                drilldown: "Safari"
             }, {
-                name: "SocialMedia",
+                name: "Opera",
                 y: 0.91,
-                drilldown: "SocialMedia"
+                drilldown: "Opera"
             }, {
-                name: "Others",
+                name: "Proprietary or Undetectable",
                 y: 0.2,
                 drilldown: null
             }]
         }],
         drilldown: {
             series: [{
-                name: "Buttons",
-                id: "Buttons",
+                name: "Microsoft Internet Explorer",
+                id: "Microsoft Internet Explorer",
                 data: [
                     [
                         "v11.0",
@@ -172,8 +97,8 @@
                     ]
                 ]
             }, {
-                name: "Backgorund",
-                id: "Backgorund",
+                name: "Chrome",
+                id: "Chrome",
                 data: [
                     [
                         "v40.0",
@@ -202,11 +127,39 @@
                     [
                         "v31.0",
                         1.24
+                    ],
+                    [
+                        "v35.0",
+                        0.85
+                    ],
+                    [
+                        "v38.0",
+                        0.6
+                    ],
+                    [
+                        "v32.0",
+                        0.55
+                    ],
+                    [
+                        "v37.0",
+                        0.38
+                    ],
+                    [
+                        "v33.0",
+                        0.19
+                    ],
+                    [
+                        "v34.0",
+                        0.14
+                    ],
+                    [
+                        "v30.0",
+                        0.14
                     ]
                 ]
             }, {
-                name: "ScrollBars",
-                id: "ScrollBars",
+                name: "Firefox",
+                id: "Firefox",
                 data: [
                     [
                         "v35",
@@ -219,11 +172,31 @@
                     [
                         "v37",
                         2.31
+                    ],
+                    [
+                        "v34",
+                        1.27
+                    ],
+                    [
+                        "v38",
+                        1.02
+                    ],
+                    [
+                        "v31",
+                        0.33
+                    ],
+                    [
+                        "v33",
+                        0.22
+                    ],
+                    [
+                        "v32",
+                        0.15
                     ]
                 ]
             }, {
-                name: "Navigation",
-                id: "Navigation",
+                name: "Safari",
+                id: "Safari",
                 data: [
                     [
                         "v8.0",
@@ -255,8 +228,8 @@
                     ]
                 ]
             }, {
-                name: "SocialMedia",
-                id: "SocialMedia",
+                name: "Opera",
+                id: "Opera",
                 data: [
                     [
                         "v12.x",
@@ -279,6 +252,3 @@
         }
     });
 });
-
-</script>
-</html>
